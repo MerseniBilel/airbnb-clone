@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { SearchIcon } from "@heroicons/react/solid";
+import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon } from "@heroicons/react/solid";
 import { SearchBar, Logo } from "./widgets/Header";
 
 const Header: NextPage = () => {
@@ -18,8 +18,21 @@ const Header: NextPage = () => {
           name="search"
           id="search"
         />
-        <SearchIcon className="h-8 p-2 md:mx-2 bg-red-400 rounded-full text-white hidden md:inline-flex" />
+        <SearchIcon className="h-8 p-2 md:mx-2 bg-red-500 rounded-full text-white hidden md:inline-flex" />
       </SearchBar>
+
+      <div className="flex items-center justify-end space-x-4 text-gray-500">
+        <p className="hidden md:inline-flex cursor-pointer">Become a host</p>
+        <GlobeAltIcon className="h-6 cursor-pointer"/>
+
+        <div className="flex items-center space-x-2 p-2 rounded-full border-2">
+          <MenuIcon className="h-6 cursor-pointer"/>
+          <UserCircleIcon className="h-6 cursor-pointer"/>
+        </div>
+
+      </div>
+
+
     </header>
   );
 };
